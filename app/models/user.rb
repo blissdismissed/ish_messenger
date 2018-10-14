@@ -7,7 +7,7 @@ class User < ApplicationRecord
                         uniqueness: { case_sensitive: false }
 
   has_secure_password
-  validates :password, length: { minimum: 6 }, if: "password.present?"
+  validates :password, length: { minimum: 6 }, presence: true
   
     # Returns the hash digest of the given string.
   def User.digest(string)
