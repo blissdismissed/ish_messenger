@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       #handle a successful save
       log_in @user #Logs in user after signing up
-      flash[:success] = "Welcome to the Sample App, now do a barrel roll!"
+      flash[:success] = "Welcome to Gaijin Tings, now do a barrel roll!"
       redirect_to @user 
     else
       render 'new'
